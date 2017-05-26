@@ -168,13 +168,13 @@ public class MainService {
 							//判断是否存在匿名内部类
 							int i = 1;
 							String newfilepath = filePath.replace(".class", "$"+i+".class");
-							File param = new File(resourceFile+newfilepath);
+							File param = new File(res+newfilepath);
 							while(param.exists()){
 								System.out.println("存在匿名内部类:"+newfilepath);
 								cf.execute(resourceFile,tagDir,newfilepath);
 								i++;
 								newfilepath = filePath.replace(".class", "$"+i+".class");
-								param = new File(resourceFile+newfilepath);
+								param = new File(res+newfilepath);
 							}
 						}
 
