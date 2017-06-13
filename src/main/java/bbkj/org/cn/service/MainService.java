@@ -171,7 +171,7 @@ public class MainService {
 							File param = new File(res+newfilepath);
 							while(param.exists()){
 								System.out.println("存在匿名内部类:"+newfilepath);
-								cf.execute(resourceFile,tagDir,newfilepath);
+								cf.execute(resourceFile,tagDir,key_path[2]+newfilepath);
 								i++;
 								newfilepath = filePath.replace(".class", "$"+i+".class");
 								param = new File(res+newfilepath);
