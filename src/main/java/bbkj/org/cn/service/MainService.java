@@ -211,7 +211,9 @@ public class MainService {
 				} catch (InterruptedException e1) {
 					e1.printStackTrace();
 				}
-				
+				if(count == 0){
+					continue;
+				}
 				int p = progress*100/count;
 				JProgressBar jpb = MainService.this.getSVN_WIN().getJpanel(item).getProgressBar();
 				jpb.setValue(p);
